@@ -1,0 +1,176 @@
+/*
+NANA OPTOM COLOR PALETTE
+
+#F8F3F0 - soft background for a clean cosmetics website.
+#5C3A3A - dark color for headings and readable text.
+#D9A6A6 - soft pink that matches the NANAOPTOM beauty theme.
+rgb(255, 255, 255) - white for content areas.
+black - used for strong text contrast.
+*/
+
+/* Universal selector matches every element.
+   Border-box makes width calculations easier and predictable. */
+* {
+    box-sizing: border-box;
+}
+
+/* General page style */
+body {
+    margin: 0;
+    background-color: #F8F3F0;
+    color: #5C3A3A;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+}
+
+/* Shared header */
+header {
+    background-color: #D9A6A6;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 2px solid #5C3A3A;
+}
+
+/* Second font family is used for headings */
+h1,
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin: 8px 0 0;
+}
+
+/* Navigation uses Flexbox because links are arranged in one row. */
+nav {
+    background-color: rgb(255, 255, 255);
+    padding: 14px 20px;
+    border-bottom: 1px solid #D9A6A6;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    color: #5C3A3A;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Pseudo-class: changes a navigation link when the mouse is over it. */
+nav a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+/* Pseudo-class: makes keyboard focus visible. */
+nav a:focus {
+    outline: 2px solid #D9A6A6;
+    outline-offset: 3px;
+}
+
+/* Descendant selector: matches the first list item inside navigation. */
+nav li:first-child {
+    font-weight: 700;
+}
+
+/* Shared main content */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #D9A6A6;
+}
+
+/* Adjacent sibling selector:
+   matches a paragraph immediately after an h2. */
+h2 + p {
+    margin-top: 8px;
+}
+
+/* Grouping selector */
+p,
+li,
+td,
+th {
+    line-height: 1.6;
+}
+
+/* Attribute selector:
+   matches links that open in a new browser tab. */
+a[target="_blank"] {
+    font-weight: 600;
+}
+
+/* Shared image rules */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Shared footer */
+footer {
+    background-color: #5C3A3A;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+}
+
+/* Pseudo-element adds a small decorative mark before h2 headings. */
+h2::before {
+    content: "• ";
+}
+
+/*
+Margin collapse note:
+Vertical margins of normal block elements can collapse.
+Padding and borders on the main content help keep its spacing controlled.
+*/
+.login-link {
+    margin-left: auto;
+}
+
+.login-link a {
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: #e67e22;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    background-color: #c96816;
+}

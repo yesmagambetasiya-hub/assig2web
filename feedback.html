@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!-- Author: Assiya Yesmagambet -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Feedback page for NANA OPTOM cosmetics store">
+    <meta name="author" content="Assiya Yesmagambet">
+    <title>NANA OPTOM | Feedback</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/assiya.css">
+    <!-- Write your own comment: internal style exists only to demonstrate the cascade. -->
+    <style>
+    .feedback-section {
+        border-width: 2px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>NANA OPTOM Feedback</h1>
+    <p>Share your opinion about NANA OPTOM products and service.</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li class="login-link"><a href="login.html">Login</a></li>
+    </ul>
+</nav>
+<!-- ID is appropriate because the feedback page main content is unique. -->
+<main id="feedback-main">
+    <!-- A section is used because the feedback form is a separate part of the page. -->
+    <section class="feedback-section">
+        <!-- Write your own comment: this inline style demonstrates an override in the cascade. -->
+        <h2 style="letter-spacing: 2px;">Feedback Form</h2>
+        <p>
+            Customer feedback helps NANA optom understand what people think about its products and service.
+            Visitors can use this form to share their experience, rate a product, and leave a short comment.
+            This information can help the brand notice what customers like and what could be improved.
+        </p>
+
+        <form class="feedback-form" method="post" action="#">
+            <!-- This form does not send data to a server yet because server-side handling has not been implemented. -->
+            <!-- A fieldset is used to group related customer information inside the feedback form. -->
+            <fieldset class="feedback-group">
+                <legend>Customer Information</legend>
+            
+
+                <label for="feedback-name">Full Name:</label>
+                <input type="text" id="feedback-name" name="feedback-name"
+                        placeholder="Enter your full name" required>
+                <br>
+
+                <label for="feedback-email">Email:</label>
+                <input type="email" id="feedback-email" name="feedback-email"
+                        placeholder="Enter your email" required>
+                <br>
+
+                <label for="feedback-phone">Phone Number:</label>
+                <input type="tel" id="feedback-phone" name="feedback-phone"
+                        placeholder="+7 700 000 00 00">
+            </fieldset>
+            <fieldset class="feedback-group">
+                <legend>Your Experience</legend>
+
+                <label for="visit-date">Date:</label>
+                <input type="date" id="visit-date" name="visit-date" required>
+                <br>
+
+                <label for="purchase-count">Number of NANA OPTOM products used:</label>
+                <input type="number" id="purchase-count" name="purchase-count"
+                        min="1" placeholder="Enter a number" required>
+                <br>
+
+
+                <p>How would you rate your experience?</p>
+
+                <input type="radio" id="rating-1" name="rating" value="1" required>
+                <label for="rating-1">1</label>
+
+                <input type="radio" id="rating-2" name="rating" value="2">
+                <label for="rating-2">2</label>
+
+                <input type="radio" id="rating-3" name="rating" value="3">
+                <label for="rating-3">3</label>
+
+                <input type="radio" id="rating-4" name="rating" value="4">
+                <label for="rating-4">4</label>
+                <input type="radio" id="rating-5" name="rating" value="5">
+                <label for="rating-5">5</label>
+            </fieldset>
+            <fieldset class="feedback-group">
+                <legend>Product Feedback</legend>
+
+                <label for="feedback-product">Product:</label>
+                <select id="feedback-product" name="feedback-product" required>
+                    <option value="">Select a product</option>
+                    <option value="lip-gloss">Lip Gloss</option>
+                    <option value="mascara">Mascara</option>
+                    <option value="bb-cream">BB Cream</option>
+                    <option value="round-lab-spf">Round Lab SPF</option>
+                    <option value="celimax-toner">Celimax Toner</option>
+                    <option value="mini-blush">Mini Blush</option>
+                    <option value="brow-pencil">Brow Pencil</option>
+                </select>
+                <br>
+
+                <label for="feedback-message">Your Feedback:</label>
+                <textarea id="feedback-message" name="feedback-message"
+                            placeholder="Write your feedback here" required></textarea>
+                <br>
+
+                <input type="checkbox" id="recommend" name="recommend">
+                <label for="recommend">I would recommend NANA optom to others</label>
+            </fieldset>
+
+            <button class="feedback-button" type="submit">Submit Feedback</button>
+            <button class="feedback-button" type="reset">Reset Form</button>
+
+        </form>
+    </section>
+
+
+</main>
+
+<footer>
+    <p>
+        Contact:
+        <a href="tel:+77757562192">+7 775 756 21 92</a>
+    </p>
+
+    <p>Instagram: @nana.optom</p>
+    <p>&copy; 2026 NANA OPTOM</p>
+</footer>
+
+</body>
+</html>
