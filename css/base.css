@@ -1,176 +1,119 @@
-/*
-NANA OPTOM COLOR PALETTE
 
-#F8F3F0 - soft background for a clean cosmetics website.
-#5C3A3A - dark color for headings and readable text.
-#D9A6A6 - soft pink that matches the NANAOPTOM beauty theme.
-rgb(255, 255, 255) - white for content areas.
-black - used for strong text contrast.
-*/
+/* NANA OPTOM — Shared navy & gold styles */
 
-/* Universal selector matches every element.
-   Border-box makes width calculations easier and predictable. */
-* {
-    box-sizing: border-box;
-}
-
-/* General page style */
 body {
-    margin: 0;
-    background-color: #F8F3F0;
-    color: #5C3A3A;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.6;
-    letter-spacing: 0.2px;
+    background: #14243D;
+    color: #F5EFE4;
+    font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
-/* Shared header */
-header {
-    background-color: #D9A6A6;
-    text-align: center;
-    padding: 30px 20px;
-    border-bottom: 2px solid #5C3A3A;
-}
-
-/* Second font family is used for headings */
-h1,
-h2,
-h3 {
+h1, h2, h3 {
+    color: #D9B76E;
     font-family: Georgia, "Times New Roman", serif;
-    font-weight: 600;
-    letter-spacing: 0.5px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 36px;
+h2::before {
+    content: "✦ ";
 }
 
-header p {
-    margin: 8px 0 0;
+header, footer {
+    background: #243B5A;
+    color: #F5EFE4;
+    text-align: center;
 }
 
-/* Navigation uses Flexbox because links are arranged in one row. */
-nav {
-    background-color: rgb(255, 255, 255);
-    padding: 14px 20px;
-    border-bottom: 1px solid #D9A6A6;
+header {
+    border-bottom: 2px solid #D9B76E;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.navbar {
+    background: #14243D;
+    border-bottom: 1px solid #D9B76E;
+}
 
+.navbar .navbar-brand,
+.navbar .nav-link,
+footer a {
+    color: #D9B76E;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active,
+footer a:hover {
+    color: #fff;
+}
+
+.navbar .login-link,
+.navbar .login-link.active {
+    padding: 9px 20px;
+    background: #D9B76E;
+    color: #14243D;
+    border-radius: 8px;
+}
+
+.navbar .login-link:hover {
+    background: #F4D999;
+    color: #14243D;
+}
+
+.navbar .navbar-toggler {
+    border-color: #D9B76E;
+}
+
+main {
+    background: #1B2E4A;
+    color: #F5EFE4;
+    border: 1px solid #D9B76E;
+    border-radius: 12px;
+}
+
+main h1, main h2, main h3,
+main a {
+    color: #D9B76E;
+}
+
+main a:hover {
+    color: #fff;
+}
+
+footer {
+    border-top: 1px solid #D9B76E;
+    padding: 25px 20px;
+}
+
+.footer-social {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.footer-social a {
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 28px;
+    width: 52px;
+    height: 52px;
+    background: #14243D;
+    border: 1px solid #D9B76E;
 }
 
-nav a {
-    color: #5C3A3A;
-    text-decoration: none;
-    font-weight: 600;
+.footer-social a:hover {
+    background: #D9B76E;
+    color: #14243D;
 }
 
-/* Pseudo-class: changes a navigation link when the mouse is over it. */
-nav a:hover {
-    color: black;
-    text-decoration: underline;
+.footer-social svg {
+    width: 25px;
+    height: 25px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
-/* Pseudo-class: makes keyboard focus visible. */
-nav a:focus {
-    outline: 2px solid #D9A6A6;
-    outline-offset: 3px;
-}
-
-/* Descendant selector: matches the first list item inside navigation. */
-nav li:first-child {
-    font-weight: 700;
-}
-
-/* Shared main content */
-main {
-    width: 90%;
-    max-width: 1100px;
-    margin: 30px auto;
-    padding: 25px;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid #D9A6A6;
-}
-
-/* Adjacent sibling selector:
-   matches a paragraph immediately after an h2. */
-h2 + p {
-    margin-top: 8px;
-}
-
-/* Grouping selector */
-p,
-li,
-td,
-th {
-    line-height: 1.6;
-}
-
-/* Attribute selector:
-   matches links that open in a new browser tab. */
-a[target="_blank"] {
-    font-weight: 600;
-}
-
-/* Shared image rules */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Shared footer */
-footer {
-    background-color: #5C3A3A;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-footer a {
-    color: rgb(255, 255, 255);
-}
-
-/* Pseudo-element adds a small decorative mark before h2 headings. */
-h2::before {
-    content: "• ";
-}
-
-/*
-Margin collapse note:
-Vertical margins of normal block elements can collapse.
-Padding and borders on the main content help keep its spacing controlled.
-*/
-.login-link {
-    margin-left: auto;
-}
-
-.login-link a {
-    display: inline-block;
-    padding: 10px 22px;
-    background-color: #e67e22;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-}
-
-.login-link a:hover {
-    background-color: #c96816;
+.footer-social .icon-dot {
+    fill: currentColor;
+    stroke: none;
 }

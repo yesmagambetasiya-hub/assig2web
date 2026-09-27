@@ -1,6 +1,6 @@
-/* Login page styles for NANA OPTOM */
 
-/* Centering technique: Flexbox */
+/* NANA OPTOM — Login */
+
 #login-main {
     min-height: 70vh;
     display: flex;
@@ -8,100 +8,53 @@
     align-items: center;
 }
 
-/* Login card */
 .login-section {
     width: 380px;
-    margin: 40px auto;
+    max-width: 100%;
     padding: 35px;
-    border: 1px solid #dddddd;
+    background: #49617E;
+    color: #F5EFE4;
+    border: 1px solid #D9B76E;
     border-radius: 15px;
-    background-color: white;
-    box-sizing: border-box;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
 }
 
-.login-section h2 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    text-align: center;
+.login-section h2,
+.login-section > p,
+.login-form .form-label,
+.login-form .form-check-label {
+    color: #D9B76E;
 }
 
-.login-section > p {
-    margin-bottom: 25px;
-    text-align: center;
+.login-form .form-control {
+    background: #243B5A;
+    color: #F5EFE4;
+    border-color: #D9B76E;
 }
 
-/* Form layout */
-.login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.login-form .form-control::placeholder {
+    color: #D9B76E;
 }
 
-.login-form > label {
-    font-weight: bold;
+.login-form .form-control:focus {
+    background: #243B5A;
+    color: #fff;
+    border-color: #D9B76E;
+    box-shadow: 0 0 0 3px rgba(217, 183, 110, .2);
 }
 
-/* Email and password fields */
-.login-form input[type="email"],
-.login-form input[type="password"] {
-    width: 100%;
-    padding: 11px;
-    border: 1px solid #999999;
-    border-radius: 6px;
-    box-sizing: border-box;
+.login-form .form-check-input:checked {
+    background: #D9B76E;
+    border-color: #D9B76E;
 }
 
-/* Focus effect */
-.login-form input[type="email"]:focus,
-.login-form input[type="password"]:focus {
-    outline: none;
-    border: 2px solid #e67e22;
+.login-form .btn {
+    background: #14243D;
+    color: #D9B76E;
+    border: 2px solid #D9B76E;
 }
 
-/* Remember me */
-.remember-option {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 8px;
-    margin: 5px 0;
-}
-
-.remember-option input {
-    margin: 0;
-}
-
-/* Login button */
-.login-form button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 8px;
-    border: none;
-    border-radius: 6px;
-    background-color: #e67e22;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.login-form button:hover {
-    background-color: #c96816;
-}
-/* Login button in navigation */
-.login-link {
-    margin-left: auto;
-}
-
-.login-link a {
-    display: inline-block;
-    padding: 10px 22px;
-    background-color: #e67e22;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-}
-
-.login-link a:hover {
-    background-color: #c96816;
+.login-form .btn:hover {
+    background: #D9B76E;
+    color: #14243D;
 }
