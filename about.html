@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!-- Author: Assiya Yesmagambet -->
 <html lang="en">
@@ -8,134 +9,226 @@
     <meta name="description" content="About NANA OPTOM wholesale cosmetics store">
     <meta name="author" content="Assiya Yesmagambet">
     <title>NANA OPTOM | About</title>
+
+    <!-- Bootstrap 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/assiya.css">
 </head>
 
 <body>
 
-<header>
-   <h1>About NANA OPTOM</h1>
-   <p>Learn more about the store and its products.</p>
+<header class="about-header text-center py-4 px-3">
+    <h1 class="display-5 fw-bold">About NANA OPTOM</h1>
+    <p class="lead mb-0">Learn more about our store and products.</p>
 </header>
 
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="order.html">Order</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
-        <li class="login-link"><a href="login.html">Login</a></li>
-    </ul>
-</nav>
-<!-- ID is appropriate because the About page main content is unique. -->
-<main id="about-main">
-    <p class="quick-links">
-        Jump to:
-            <a href="#categories">Product Categories</a>
-            <a href="#order-steps">How to Order</a>
-    </p>
-    <!-- An article is used because the brand story can be understood as independent content. -->
-  <article class="brand-story">
-    <h2>Store Story</h2>
-    <p class="brand-year">Founded 2020</p>
-    <p>
-        NANA OPTOM was founded in 2020 by Shafeeva Anastasia Valeryevna.
-        The store is located in Shymkent and specializes in wholesale cosmetics.
-        It offers different cosmetics and beauty products to customers.
-        NANA OPTOM also provides delivery across Kazakhstan.
-    </p>
-</article>
-    <!-- A figure is used because the photograph has a caption that explains its connection to the brand. -->
-    <section class="photo-gallery">
-        <figure class="brand-photo">
-            <p>
-                <img src="images/nanaoptom.jpg"
-                    alt="NANA OPTOM cosmetics store in Shymkent"
-                    width="300">
-                    <small>These photographs were taken by the project team.</small>
-            </p>
+<!-- Bootstrap responsive navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
 
-            <figcaption>
-                NANA OPTOM cosmetics store in Shymkent.
-            </figcaption>
+        <a class="navbar-brand fw-bold" href="index.html">NANA OPTOM</a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Products</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="order.html">Order</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="feedback.html">Feedback</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- Login remains visible outside the collapsed menu -->
+        <a class="nav-link login-link ms-3" href="login.html">Login</a>
+
+    </div>
+</nav>
+
+<!-- Bootstrap container centers the About content -->
+<main id="about-main" class="container my-4 p-4">
+
+    <div class="quick-links mb-4">
+        <span class="me-2">Jump to:</span>
+        <a href="products.html" class="btn btn-warning">Explore Products</a>
+        <a href="order.html" class="btn btn-outline-warning">Place an Order</a>
+    </div>
+
+    <!-- Brand information -->
+    <article class="brand-story">
+        <h2>Our Story</h2>
+        <p class="brand-year">Founded in 2020</p>
+
+        <p>
+            NANA OPTOM was founded in 2020 by Shafeeva Anastasia Valeryevna.
+            We specialize in wholesale cosmetics and offer a wide range
+            of beauty and skincare products. Our products are available
+            to customers across Kazakhstan.
+        </p>
+
+        <a href="products.html" class="btn gold-button">Explore Products</a>
+    </article>
+
+    <!-- Store photograph -->
+    <section class="photo-gallery">
+        <h2>Our Store</h2>
+
+        <figure class="brand-photo">
+            <img src="images/nanaoptom.jpg"
+                 class="img-fluid rounded-3"
+                 alt="NANA OPTOM cosmetics store"
+                 width="300">
+
+            <figcaption>NANA OPTOM — Beauty in Every Detail</figcaption>
+            <small>Photograph by the project team.</small>
         </figure>
     </section>
 
-   <section class="mission-section">
-    <h2>Our Products</h2>
-    <p>
-        NANA OPTOM offers cosmetics from different brands, including luxury and affordable products. 
-        Customers can find skincare and makeup products at wholesale prices.
-        For example, the store offers products from brands such as Round Lab, Sen Sulu, Celimax, and other cosmetic brands.
-        The assortment includes skincare, face, eye, and lip products for different needs and budgets.
-        <strong>cosmetics</strong>
-        <em>skincare products</em>
-        <mark>wholesale cosmetics</mark>
-    </p>
+    <!-- Product information -->
+    <section class="mission-section">
+        <h2>Our Products</h2>
+
+        <p>
+            NANA OPTOM offers <strong>cosmetics</strong> from different brands,
+            including luxury and affordable products. Customers can find
+            <em>skincare products</em> and makeup at wholesale prices.
+            Our assortment includes products from Round Lab, Sen Sulu,
+            Celimax and other cosmetic brands.
+            We offer <mark>wholesale cosmetics</mark> for different needs
+            and budgets.
+        </p>
     </section>
 
-<section id="categories" class="symbol-section">
-    <h2>Product Categories</h2>
+    <!-- Product categories -->
+    <section id="categories" class="symbol-section">
+        <h2>Product Categories</h2>
 
-    <aside>
-        <h3>Available Categories</h3>
-        <ul>
-            <li>
-                Skincare
-                <ul>
-                    <li>Sunscreen</li>
-                    <li>Toner</li>
-                </ul>
-            </li>
-            <li>Face Products</li>
-            <li>Eye Products</li>
-            <li>Lip Products</li>
-        </ul>
-    </aside>
-</section>
+        <aside>
+            <h3>Available Categories</h3>
 
-<section id="order-steps" class="order-steps-section">
-    <h2>How to Order</h2>
+            <ul>
+                <li>
+                    Skincare
+                    <ul>
+                        <li>Sunscreen</li>
+                        <li>Toner</li>
+                    </ul>
+                </li>
+                <li>Face Products</li>
+                <li>Eye Products</li>
+                <li>Lip Products</li>
+            </ul>
+        </aside>
+    </section>
 
-    <ol type="1">
-        You can order our products at wholesale prices through our website. 
-        You can also contact NANA OPTOM through WhatsApp or Instagram to place an order.
-        We offer a wide range of cosmetics at affordable wholesale prices.
-        Delivery is available across Kazakhstan.
-    </ol>
-</section>
+    <!-- Ordering instructions -->
+    <section id="order-steps" class="order-steps-section">
+        <h2>How to Order</h2>
 
-<section class="facts-section">
-    <h2>Store Facts</h2>
-    <hr>
+        <ol>
+            <li>Explore our cosmetics collection.</li>
+            <li>Select the products you want to purchase.</li>
+            <li>Contact us through WhatsApp or Instagram.</li>
+            <li>Confirm your order and delivery details.</li>
+            <li>Receive your products through delivery across Kazakhstan.</li>
+        </ol>
 
-    <dl>
-        <dt>Founded</dt>
-        <dd>2020</dd>
+        <a href="order.html" class="btn gold-button">Place an Order</a>
+    </section>
 
-        <dt>Founder</dt>
-        <dd>Shafeeva Anastasia Valeryevna</dd>
+    <!-- Store facts -->
+    <section class="facts-section">
+        <h2>Store Facts</h2>
+        <hr>
 
-        <dt>Location</dt>
-        <dd>Shymkent, Kazakhstan</dd>
-        <dt>Address</dt>
-        <dd>Kaskabulak 21</dd>
-    </dl>
-</section>
+        <dl>
+            <dt>Founded</dt>
+            <dd>2020</dd>
+
+            <dt>Founder</dt>
+            <dd>Shafeeva Anastasia Valeryevna</dd>
+
+            <dt>Specialization</dt>
+            <dd>Wholesale Cosmetics</dd>
+
+            <dt>Delivery</dt>
+            <dd>Across Kazakhstan</dd>
+        </dl>
+    </section>
 
 </main>
 
 <footer>
-    <p>
-        Contact:
-        <a href="tel:+77757562192">+7 775 756 21 92</a>
-    </p>
+    <div class="footer-social">
 
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/nana.optom/"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1" class="icon-dot"></circle>
+            </svg>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@nana.optom?_r=1&amp;_t=ZS-9A1kYobpDSX"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="TikTok" title="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 3v11.5a4.5 4.5 0 1 1-4.5-4.5"></path>
+                <path d="M14 3c.7 3.2 2.5 4.8 6 5"></path>
+            </svg>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/77781003727"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="WhatsApp" title="WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20.5l1.5-5.1A8.5 8.5 0 1 1 20.5 11.5Z"></path>
+                <path d="M8.5 8.5c.5 3 3 5.5 6 6l1.5-1.5"></path>
+            </svg>
+        </a>
+
+    </div>
+
+    <p>Contact: <a href="tel:+77757562192">+7 775 756 21 92</a></p>
     <p>Instagram: @nana.optom</p>
     <p>&copy; 2026 NANA OPTOM</p>
 </footer>
+
+<!-- Bootstrap JavaScript for the mobile menu -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
